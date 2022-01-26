@@ -125,6 +125,27 @@
 		</select>
 	</p>
 
+	<p>
+		<label for="<?php echo $this->get_field_id( 'date_filter' ); ?>">
+			<?php _e( 'Date Filter', 'recent-posts-widget-extended' ); ?>
+		</label>
+		<select class="widefat" id="<?php echo $this->get_field_id( 'date_filter' ); ?>" name="<?php echo $this->get_field_name( 'date_filter' ); ?>" style="width:100%;">
+			<option value="all" <?php selected( $instance['date_filter'], 'all' ); ?>><?php _e( 'All Dates', 'rpwe' ) ?></option>
+			<option value="after" <?php selected( $instance['date_filter'], 'after' ); ?>><?php _e( 'Future Dates', 'rpwe' ) ?></option>
+			<option value="before" <?php selected( $instance['date_filter'], 'before' ); ?>><?php _e( 'Past Dates', 'rpwe' ) ?></option>
+		</select>
+	</p>
+
+	<p>
+		<label for="<?php echo $this->get_field_id( 'date_filter_adj' ); ?>">
+			<?php _e( 'Date Filter Adjustment', 'recent-posts-widget-extended' ); ?>
+		</label>
+		<input class="widefat" id="<?php echo $this->get_field_id( 'date_filter_adj' ); ?>" name="<?php echo $this->get_field_name( 'date_filter_adj' ); ?>" type="number" step="1" value="<?php echo (int)( $instance['date_filter_adj'] ); ?>" />
+        <small><?php _e( 'Adjustment in days. Negative values allowed. Only used if Date Filter set to future or past dates.', 'rpwe' );?></small>
+	</p>
+
+
+
 	<div class="rpwe-multiple-check-form">
 		<label>
 			<?php _e( 'Limit to Category', 'recent-posts-widget-extended' ); ?>

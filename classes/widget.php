@@ -105,6 +105,8 @@ class Recent_Posts_Widget_Extended extends WP_Widget {
 		$instance['offset']           = intval( $new_instance['offset'] );
 		$instance['order']            = stripslashes( $new_instance['order'] );
 		$instance['orderby']          = stripslashes( $new_instance['orderby'] );
+		$instance['date_filter']      = stripslashes( $new_instance['date_filter'] );
+		$instance['date_filter_adj']  = intval( $new_instance['date_filter_adj'] );
 		$instance['post_type']        = $types;
 		$instance['post_status']      = stripslashes( $new_instance['post_status'] );
 		$instance['cat']              = $new_instance['cat'];

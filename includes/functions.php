@@ -259,6 +259,10 @@ function rpwe_get_posts( $args = array() ) {
 		$query['tag__in'] = $args['tag'];
 	}
 
+	if( $args['date_filter'] != 'all' ) {
+		$query['date_query'] = array('column' => 'post_date', $args['date_filter'] => $args['date_filter_adj'] . ' days' );
+	}
+
 	/**
 	 * Taxonomy query.
 	 * Prop Miniloop plugin by Kailey Lampert.
